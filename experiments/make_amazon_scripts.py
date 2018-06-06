@@ -23,7 +23,7 @@ def main():
 
 def make_scripts(omp_num_threads=None):
     for subset in ['clothing', 'home', 'sports', 'tools', 'toys']:
-        for penalty in ['l1', 'l2']:
+        for penalty in ['l1']:
             for objective in ['f1', 'calibration']:
                 for max_n_train in ['500', '4000']:
                     input_dir = os.path.join('data', 'amazon', subset)

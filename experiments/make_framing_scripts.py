@@ -25,8 +25,8 @@ FRAMES = ["Economic",
 os.makedirs('scripts')
 #for sample in ['0', '1']:
 for subset in ['immigration', 'samesex', 'tobacco']:
-    for penalty in ['l1', 'l2']:
-        for max_n_train in ['250', '500', '1000', '2000']:
+    for penalty in ['l1']:
+        for max_n_train in ['500', '2000']:
             input_dir = os.path.join('data', 'framing', subset)
             outfile = os.path.join('scripts', 'framing_' + subset + '_' + penalty + '_max' + max_n_train + '.sh')
             with open(outfile, 'w') as f:

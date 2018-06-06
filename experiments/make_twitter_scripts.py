@@ -22,8 +22,9 @@ def main():
 
 def make_scripts(omp_num_threads=None):
 
+    # use pairs of adjacent days that have sufficient data
     days = [108, 109, 110, 121, 122, 123, 129, 130, 133, 136, 137, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 165]
-    for penalty in ['l1', 'l2']:
+    for penalty in ['l1']:
         for day in days:
             input_dir = os.path.join('data', 'twitter')
             outfile = os.path.join('scripts', 'twitter_' + str(day) + '_' + penalty + '.sh')

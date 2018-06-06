@@ -25,14 +25,20 @@ For each dataset, there is an import script to convert documents to json objects
 
 Then call prepocess_data_fast twice to extract unigrams and bigrams:
 
-`python -m preprocessing.preprocess_data_fast data/amazon/clothes/all.jsonlist data/amazon/clothes all`
-`python -m preprocessing.preprocess_data_fast data/amazon/clothes/all.jsonlist data/amazon/clothes all --bigrams`
+```
+python -m preprocessing.preprocess_data_fast data/amazon/clothes/all.jsonlist data/amazon/clothes all
+python -m preprocessing.preprocess_data_fast data/amazon/clothes/all.jsonlist data/amazon/clothes all --bigrams
+```
 
 Any other features could also be used, if they are converted to the same format.
 
 ### Experiments
 
-The `run_lr_grid.py` method can be used to run a variety of experiments, and will use all methods in the paper to estimate proportions. To re-create experiments, use the scripts in the `experiments` directory to generate scripts to run many experiments, and then use `post/average_over_dev_folds.py` to combine the predicted proportions on the test set from all folds of train/dev cross-validation.
+The `run_lr_grid.py` method can be used to run a variety of experiments. For example, to run one dev-fold of one sub experiment of the Amazon data, with l1 regularization, 500 training documents, and calibration as a criterion for model selection, use:
+
+`python run_lr_grid.py data/amazon/clothing all  --label labels --features unigrams,bigrams --min_dfs 0,0 --penalty l1 --objective calibration --max_n_train 500 --metadata metadata --field year --train_start 2010 --train_end 2010 --test_start 2011 --test_end 2011 --dev_fold 0`
+
+To re-create experiments, use the scripts in the `experiments` directory to generate scripts to run all the experiments, run all the resulting bash scripts, and then use `post/average_over_dev_folds.py` to combine the predicted proportions on the test set from all folds of train/dev cross-validation.
 
 
 ### References

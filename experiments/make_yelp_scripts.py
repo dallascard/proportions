@@ -26,7 +26,7 @@ def make_scripts(omp_num_threads=None):
     dirs = ['Charlotte', 'Las_Vegas', 'Tempe', 'Toronto']
     for pair_i, pair in enumerate(pairs):
         years = range(2009, 2017)
-        for penalty in ['l1', 'l2']:
+        for penalty in ['l1']:
             for year in years:
                 for max_n_train in ['500', '4000']:
                     input_dir = os.path.join('data', 'yelp', dirs[pair_i])
