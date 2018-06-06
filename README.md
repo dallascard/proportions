@@ -1,4 +1,4 @@
-This is a repo to accompany the paper The Importance of Calibration for Estimating Proportions from Annotations. It implements a few different methods for quantification, but is provided primarily for the purpose of replicabilty, and is not intended to be used in production.
+This is a repo to accompany the paper [The Importance of Calibration for Estimating Proportions from Annotations](https://www.cs.cmu.edu/~dcard/resources/NAACL_2018_main.pdf). It implements a few different methods for quantification, but is provided primarily for the purpose of replicabilty, and is not intended to be used in production.
 
 ### Requirements
 
@@ -12,8 +12,8 @@ This is a repo to accompany the paper The Importance of Calibration for Estimati
 
 ### Datasets
 
-- [Media Frames Corpus](http://www.cs.cmu.edu/~dcard/resources/card.acl2015.pdf)
-- [Amazon review datasets](http://jmcauley.ucsd.edu/data/amazon/)
+- [Media Frames Corpus](http://www.cs.cmu.edu/~dcard/resources/card.acl2015.pdf) [contact me]
+- [Amazon review datasets](http://jmcauley.ucsd.edu/data/amazon/) [contact Julian McAuley]
 - Yelp10 [no longer available from Yelp]
 - [Sentiment140](http://help.sentiment140.com/for-students/)
 
@@ -37,4 +37,4 @@ The `run_lr_grid.py` method can be used to run a variety of experiments, and wil
 
 ### References
 
-Dallas Card and Noah A. Smith. The Importance of Calibration for Estimating Proportions from Annotations. In Proceedings of NAACL, 2018. [paper] [supplementary] [BibTeX]
+Dallas Card and Noah A. Smith. The Importance of Calibration for Estimating Proportions from Annotations. In Proceedings of NAACL, 2018. [[paper](https://www.cs.cmu.edu/~dcard/resources/NAACL_2018_main.pdf)] [[supplementary](https://www.cs.cmu.edu/~dcard/resources/NAACL_2018_supplementary.pdf)] [[BibTeX](https://github.com/dallascard/proportions/blob/master/proportions.bib)]
