@@ -21,7 +21,7 @@ This is a repo to accompany the paper [The Importance of Calibration for Estimat
 
 For each dataset, there is an import script to convert documents to json objects. For example, run:
 
-`python -m datasets.import_amazon /m-pinotHD/dallas/data/amazon_reviews/reviews_Clothing_Shoes_and_Jewelry_5.json.gz data/amazon/clothes/`
+`python -m datasets.import_amazon downloads/amazon_reviews/reviews_Clothing_Shoes_and_Jewelry_5.json.gz data/amazon/clothes/`
 
 Then call prepocess_data_fast twice to extract unigrams and bigrams:
 
